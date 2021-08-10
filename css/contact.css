@@ -1,0 +1,121 @@
+:root {
+  --white-color-text: #feffff;
+  --grey-color-text: #979e9f;
+  --footer-color-text: #616161;
+  --sky-color-text: #0099cc;
+  --background-parent: #1d1d1d;
+  --background-header: #090909;
+  --background-main: #131313;
+  --background-circle: #433333;
+  --background-alert: #336633;
+  --border-icon: #2e2e2e;
+}
+
+
+main .landing {
+  position: relative;
+  margin-block: 20px;
+}
+
+h1 {
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  font-size: 62px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 42px !important;
+  }
+}
+
+main .column-one {
+  min-width: calc(70% - 20px);
+  background-color: var(--background-main);
+  padding: 40px 100px 30px 30px;
+  min-height: 100%;
+}
+
+main .column-one h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 991px) {
+  main .column-one {
+    padding: 40px 30px 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  main .parent {
+    flex-direction: column;
+  }
+
+  main .column-one {
+    padding: 20px 10px 15px 15px;
+    margin: 0 0 20px;
+  }
+}
+
+main .column-two {
+  min-width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main .column-two .map {
+  margin-block: 20px;
+}
+
+main .column-two .map .title-item {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  main .column-two .map .title-item {
+    margin-left: 20px;
+  }
+}
+
+main .column-two .map .title-item h3 {
+  text-transform: uppercase;
+}
+
+main .column-two .details {
+  background-color: var(--background-main);
+}
+
+main .column-two .details article {
+  padding: 20px;
+}
+
+main .column-two .details article h3 {
+  color: var(--white-color-text);
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+main .column-two .details article p:first-of-type {
+  margin-bottom: 20px;
+}
+
+main .column-two .details article .foot ul {
+  margin-top: 20px;
+  margin-left: -10px;
+}
+
+main .column-two .details article .foot ul li {
+  margin-right: 10px;
+}
+
+main .column-two .details article .foot ul li a {
+  font-size: 22px;
+}

@@ -1,0 +1,95 @@
+/* CSS Index
+-----------------------------------
+1. R O O T
+2. G L O B A L  R U L E S
+3. P U B L I C   S T Y L E
+4. H E A D E R
+5. M A I N
+6. F O O T E R
+*/
+/* [ 1 ]------- R O O T -------*/
+:root {
+  --white-color-text: #feffff;
+  --grey-color-text: #979e9f;
+  --footer-color-text: #616161;
+  --sky-color-text: #0099cc;
+  --background-parent: #1d1d1d;
+  --background-header: #090909;
+  --background-main: #131313;
+  --background-circle: #433333;
+  --background-alert: #336633;
+  --border-icon: #2e2e2e;
+}
+.main-heading h1 {
+  text-align: left;
+  font-size: 56px ;
+}
+.list-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.list-header .title-item i {
+  font-size: 16px;
+  margin-right: 10px;
+}
+.list-header .title-item h3 {
+  font-size: 16px;
+}
+.list-header .title-item {
+  margin-right: 20px;
+}
+.list-header ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.list-header ul li a {
+  color: var(--sky-color-text);
+  font-size: 16px;
+}
+.list-header ul li .active-sort {
+  color: var(--white-color-text);
+}
+@media (max-width: 767px) {
+  .list-header ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .main-heading h1 {
+  font-size: 40px ;
+  }
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+.load-more {
+  margin-block: 20px;
+  font-size: 18px;
+}
+.load-more i {
+  color: var(--footer-color-text);
+  margin-right: 10px;
+}
+.load-more a {
+  color: var(--sky-color-text);
+}
+figure figcaption::after {
+  content: '';
+  width: 0;
+  height: 5px;
+  background-color: var(--white-color-text);
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+figure:hover figcaption::after{
+  width: 100%;
+}

@@ -1,0 +1,295 @@
+:root {
+  --white-color-text: #feffff;
+  --grey-color-text: #999999;
+  --footer-color-text: #616161;
+  --sky-color-text: #0099cc;
+  --background-parent: #1d1d1d;
+  --background-header: #090909;
+  --background-main: #131313;
+  --background-circle: #433333;
+  --background-alert: #336633;
+  --border-icon: #2e2e2e;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.parent section {
+  counter-reset: sami;
+  margin-bottom: 30px;
+}
+
+.parent section article {
+  background-color: var(--background-main);
+  color: var(--grey-color-text);
+  padding: 0;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.parent section article h3 {
+  background-color: var(--background-parent);
+  padding: 16px 30px;
+  color: var(--white-color-text);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: normal;
+  counter-increment: sami;
+}
+
+.parent section article:first-of-type>h3:before {
+  content: "\f068";
+  font-family: "Font Awesome 5 Free";
+  margin-right: 18px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.parent section article:not(article:first-of-type)>h3:before {
+  content: "\f067";
+  font-family: "Font Awesome 5 Free";
+  margin-right: 18px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.parent section article h3::after {
+  content: counter(sami);
+  margin-left: 10px;
+}
+
+.parent section article .text {
+  position: relative;
+  padding: 20px 66px;
+  height: 264px;
+  overflow: auto;
+  text-overflow: ellipsis;
+}
+
+.parent section article .text::before {
+  content: "\f086";
+  font-family: "Font Awesome 5 Free";
+  margin-right: 18px;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  left: 26px;
+}
+
+.parent section article .text p {
+  line-height: 1.6;
+}
+
+.parent section article .text p:first-of-type {
+  margin-bottom: 20px;
+}
+
+aside>h3 {
+  color: var(--white-color-text);
+}
+
+aside article {
+  padding: 0;
+}
+
+aside .details {
+  margin-bottom: 30px;
+}
+
+aside .details p:first-of-type {
+  margin-bottom: 20px;
+}
+
+aside .foot i {
+  font-size: 20px;
+}
+
+aside .title-item {
+  margin-block: 20px;
+}
+
+aside .title-item h3 {
+  font-weight: normal;
+  color: var(--grey-color-text);
+}
+
+aside .last-project {
+  margin-bottom: 30px;
+}
+
+aside .last-project figcaption {
+  width: 100%;
+  height: 138px;
+  position: relative;
+  border-bottom: 4px solid var(--border-icon);
+}
+
+aside .last-project figcaption::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top right, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0));
+}
+
+aside .last-project figcaption h3 {
+  color: var(--white-color-text);
+  font-weight: normal;
+  position: absolute;
+  z-index: 3;
+  bottom: 10px;
+  left: 10px;
+}
+
+aside .last-project figcaption.one {
+  background-image: url(../images/faqtwo.jpg);
+  margin-bottom: 20px;
+}
+
+aside .last-project figcaption.two {
+  background-image: url(../images/faqone.jpg);
+}
+
+aside .last-project figcaption::before {
+  content: '';
+  width: 0;
+  height: 5px;
+  background-color: var(--white-color-text);
+  position: absolute;
+  z-index: 9;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+aside .last-project figcaption:hover::before {
+  width: 100%;
+}
+
+aside .last-project figcaption:hover::after {
+  background: linear-gradient(to top right, rgb(0, 0, 0, 1), rgb(0, 0, 0, 0.4));
+}
+
+main .container .title-item {
+  margin-bottom: 20px;
+}
+
+main .container>section .items {
+  margin-bottom: 30px;
+}
+
+main .container>section .items .figure-faq {
+  position: relative;
+  cursor: pointer;
+  border-bottom: 4px solid var(--border-icon);
+}
+
+main .container>section .items .figure-faq::before {
+  content: '';
+  width: 0;
+  height: 5px;
+  background-color: var(--white-color-text);
+  position: absolute;
+  z-index: 9;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+main .container>section .items .figure-faq:hover::before {
+  width: 100%;
+}
+
+main .container>section .items .figure-faq::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  z-index: 9;
+  background: linear-gradient(to top right, rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0));
+}
+
+main .container>section .items .figure-faq:hover::after {
+  background: linear-gradient(to top right, rgb(0, 0, 0, 1), rgb(0, 0, 0, 0.4));
+}
+
+main .container>section {
+  padding: 0;
+}
+
+main .container>section .items .figure-faq figcaption {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  z-index: 99;
+}
+
+main .container>section .items .figure-faq figcaption h3 {
+  color: var(--white-color-text);
+  font-size: 20px;
+  font-weight: normal;
+}
+
+main .container>section .items .figure-faq figcaption p {
+  color: var(--white-color-text);
+}
+
+.items article {
+  height: 300px;
+}
+
+.items .blog article .space-bottom {
+  margin-bottom: 30px;
+}
+
+.items .last-tweets article .one {
+  color: var(--white-color-text);
+}
+
+.items .last-tweets article .read-more {
+  text-decoration: none;
+}
+
+.items .last-tweets article .read-more:hover {
+  text-decoration: underline;
+}
+
+.items .subscribes .row {
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+}
+
+main .items .subscribes input[type="email"] {
+  height: 100%;
+  outline: none;
+  border: none;
+  width: 75%;
+  padding: 10px 20px;
+}
+
+main .items .subscribes input[type="submit"] {
+  border: 1px solid var(--border-icon);
+  outline: none;
+  height: 100%;
+  width: 23%;
+  margin: -3px;
+  background-color: var(--sky-color-text);
+}
